@@ -11,7 +11,7 @@ export const Project = () => {
     <Sorting/>
     </div>
     <div className="project-container">
-      
+      This is the trial    
     </div>
     
     </>
