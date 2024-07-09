@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* Homepage-font */
+@font-face {
+  font-family: Homepage-font ;
+  src: url("../public/fonts/KCUprightCasual.otf");
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+
+  font-family: "Nunito", sans-serif ;
+}
+
+
+/* button style */
+
+.global-btn{
+  border: 2px solid black;
+  padding: 12px;
+  border-radius: 30px ;
+  text-decoration: none;
+  color: black;
+  letter-spacing: -1px;
+}

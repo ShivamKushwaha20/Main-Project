@@ -1,0 +1,53 @@
+.right-container{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    border: 1px solid black;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-tagline{
+    font-size: 350px;
+    font-weight: 300;
+    font-family: Homepage-font;
+}
+
+.header-subtagline{
+    font-size: 100px;
+    font-weight: 300;
+    font-family: Homepage-font;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.header-subtagline2{
+    font-size: 90px;
+    font-weight: 300;
+    font-family: Homepage-font;
+    position: absolute;
+    top: 60vh;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align:center;
+    z-index: 4;
+    clip-path: circle(100px at var(--x, 50%), var(--y, 50%));
+    transition: clip-path 100ms;
+    display: none;
+}
+
+.checkwork-btn:hover{
+    color: white;
+    background-color: black;
+    
+}
+
+
+
+
+
+
+
+
