@@ -21,7 +21,7 @@ const Navbar = () => {
                     */}
                     <li> <NavLink to="/" className="Navbar-button">Home</NavLink> </li>
                     <li> <NavLink to="/about" className="Navbar-button">About</NavLink> </li>
-                    <li> <NavLink to="/project" className="Navbar-button">Project</NavLink> </li>
+                    <li> <NavLink to="/project" className="Navbar-button">Work</NavLink> </li>
                     <li> <NavLink to="/contact" className="Navbar-button">Contact</NavLink> </li>
                 </ul>
             </nav>
