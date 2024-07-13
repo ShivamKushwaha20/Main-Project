@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { Sorting } from './DataStructure/sorting/Sorting'
 import './Project.css';
+import { Astar } from './DataStructure/PathFinder/Astar';
 
 
 export const Project = () => {
@@ -11,9 +11,8 @@ export const Project = () => {
     <Sorting/>
     </div>
     <div className="project-container">
-       
+      <Astar/> 
     </div>
-    
     </>
   )
 }

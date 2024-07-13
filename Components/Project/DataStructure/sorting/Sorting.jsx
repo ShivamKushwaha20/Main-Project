@@ -108,28 +108,28 @@ export const Sorting = () => {
       <div className="sorting-container">
         <div className="upper-container">
           <button
-            className="sorting-button"
+            className="sorting-button stylish-button"
             onClick={bubbleSort}
             disabled={sorting}
           >
             Bubble {sorted ? `Sorted` : `sort`}
           </button>
           <button
-            className="sorting-button"
+            className="sorting-button stylish-button"
             onClick={SelectionSort}
             disabled={sorting}
           >
             Selection {sorted ? "sorted" : "sort"}
           </button>
           <button
-            className="sorting-button"
+            className="sorting-button stylish-button"
             onClick={insertionSort}
             disabled={sorting}
           >
             Insertion {sorted ? "sorted" : "sort"}
           </button>
           <button
-            className="sorting-button"
+            className="sorting-button stylish-button"
             onClick={resetArray}
             disabled={sorting}
           >
@@ -170,7 +170,7 @@ export const Sorting = () => {
                 className="array-bar"
                 key={idx}
                 style={{
-                  height: `${value}px`,
+                  height: `${value*.18}%`,
                   backgroundColor: sorted ? `green` : `black`,
                 }}
               ></div>
