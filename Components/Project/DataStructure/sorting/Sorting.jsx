@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./sorting.css";
+import './sorting.css'
+import {bubbleSort, SelectionSort, insertionSort} from './algo/Sorting-algo.js'
 
 export const Sorting = () => {
   const [array, setArray] = useState([]);
@@ -32,98 +33,28 @@ export const Sorting = () => {
     setArray(newArray);
     setSorted(false);
   };
-
-  // bubble sort
-
-  const bubbleSort = async () => {
-    if (sorting) return;
-    setSorting(true);
-    let arr = array.slice();
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < arr.length - i - 1; j++) {
-        if (arr[j] > arr[j + 1]) {
-          let temp = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = temp;
-          setArray(arr.slice());
-          await new Promise((resolve) => setTimeout(resolve, time));
-        }
-      }
-    }
-    setSorting(false);
-    setSorted(true);
-  };
-
-  // swap method
-  function swap(arr, xp, yp) {
-    var temp = arr[xp];
-    arr[xp] = arr[yp];
-    arr[yp] = temp;
-  }
-
-  // selection sort
-  const SelectionSort = async () => {
-    if (sorting) return;
-    setSorting(true);
-    var i, j, min_idx;
-    const arr = array.slice();
-
-    for (i = 0; i < arr.length - 1; i++) {
-      min_idx = i;
-      for (j = i + 1; j < arr.length; j++) {
-        if (arr[j] < arr[min_idx]) {
-          min_idx = j;
-        }
-      }
-      if (min_idx !== i) {
-        swap(arr, min_idx, i);
-        setArray(arr.slice());
-        await new Promise((resolve) => setTimeout(resolve, time));
-      }
-    }
-    setSorting(false);
-    setSorted(true);
-  };
-
-  // insertion sort
-  const insertionSort = async () => {
-    if (sorting) return;
-    let i;
-    let arr = array.slice();
-    for (i = 1; i < arr.length; i++) {
-      let j=i;
-      while(j>0 && arr[j] < arr[j-1]){
-        swap(arr, j, j-1);
-        setArray(arr.slice());
-        await new Promise((resolve)=> setTimeout(resolve, time));
-        j--;
-      }
-    }
-    setSorted(false);
-    setSorted(true);
-  };
-
+ 
   return (
     <>
       <div className="sorting-container">
         <div className="upper-container">
           <button
             className="sorting-button stylish-button"
-            onClick={bubbleSort}
+            onClick={()=>bubbleSort(array, setArray, setSorted, setSorted, time)}
             disabled={sorting}
           >
             Bubble {sorted ? `Sorted` : `sort`}
           </button>
           <button
             className="sorting-button stylish-button"
-            onClick={SelectionSort}
+            onClick={()=>SelectionSort(array, setArray, setSorting, setSorted, time)}
             disabled={sorting}
           >
             Selection {sorted ? "sorted" : "sort"}
           </button>
           <button
             className="sorting-button stylish-button"
-            onClick={insertionSort}
+            onClick={()=>insertionSort(array, setArray, setSorting, setSorted, time)}
             disabled={sorting}
           >
             Insertion {sorted ? "sorted" : "sort"}
